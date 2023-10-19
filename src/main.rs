@@ -8,13 +8,17 @@ fn main() {
 		print!(">>> ");
 		stdout().flush();
 
-		let mut input = String::new(); // creates new string to hold user input
-		stdin().read_line(&mut input).unwrap(); // read user input, and writes user input when the enter key is pressed
-	
-		// read_line leaves a trailing newline ( \n ), which trim removes
-		let command = input.trim();
+		let mut input = String::new(); // var to store user input
+		stdin().read_line(&mut input).unwrap(); // reads user input, and writes into input string
+
+		// everything after the first whitespace character
+		// is interpreted as args to the command
+		let mut parts = input.trim().split_whitespace();
+		let command = parts.next().unwrap();
+		let args = parts;
 	
 		let mut child = Command::new(command)
+			.args(args)
 			.spawn()
 			.unwrap();
 
