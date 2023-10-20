@@ -4,7 +4,20 @@ use std::path::Path;
 use std::env;
 
 fn main() {
-	loop{
+
+  // Clear the screen using the appropriate command for your operating system
+  if cfg!(target_os = "windows") {
+      Command::new("cmd")
+          .arg("cls")
+          .status()
+          .expect("failed to execute process");
+  } else {
+      Command::new("clear")
+          .status()
+          .expect("failed to execute process");
+    }
+
+  loop{
 		// use the `>>>` characters as the prompt
 		// need to explicitly flush this to ensure it prints before read_line
 		print!(">>> ");
