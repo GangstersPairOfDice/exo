@@ -34,7 +34,7 @@ cd <directory>
 ls | grep <string>
 
 # quit exo
-`exit` or `quit` or `q`
+exit or quit or q
 ```
 
 More features are available, fx. already build-in shell commands, like `echo`.
