@@ -24,6 +24,7 @@ fn main() {
 		stdout().flush();
 
 		let mut input = String::new(); // var to store user input
+
 		stdin().read_line(&mut input).unwrap(); // reads user input, and writes into input string
 
     // must be peekable so we know when we are on the last command
@@ -35,7 +36,7 @@ fn main() {
   		// everything after the first whitespace character
   		// is interpreted as args to the command
   		let mut parts = command.trim().split_whitespace();
-  		let command = parts.next().unwrap();
+      let command = parts.next().unwrap();
   		let args = parts;
 
       match command {
@@ -51,7 +52,7 @@ fn main() {
 
         },
   
-        "exit" => return,
+        "exit" | "quit" | "q" => return,
   
         command => {
           let stdin = previous_command
