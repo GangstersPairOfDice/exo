@@ -1,6 +1,6 @@
 # exo
 
-exo is a shell written in Rust.
+`exo` is a shell written in Rust.
 
 ## Installation
 
