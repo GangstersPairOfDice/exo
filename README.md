@@ -4,7 +4,7 @@
 
 ## Installation
 
-First, make sure you have [Rust](https://www.rust-lang.org/) installed. You can install it from [here](https://www.rust-lang.org/learn/get-started)
+First, make sure you have [Rust](https://www.rust-lang.org/) installed. You can install it from [here](https://www.rust-lang.org/learn/get-started).
 
 ## Usage
 
